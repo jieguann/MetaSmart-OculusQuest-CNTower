@@ -1,0 +1,134 @@
+
+
+-------------------------------
+
+character
+
+------------------------------------------------------------------------
+拿所有gear信息，gps
+
+获取gear，放背包，energy，max 3 times per session
+穿戴gear
+
+
+
+
+
+
+// enum Sports{
+//   Basketball,
+//   Golf,
+//   Soccer,
+//   Football,
+//   Baseball
+// }
+
+
+// class Insanity{
+//   constructor(
+//       private room:number = 10,
+//       private current:number = 0
+//   ) {}
+//   reset(){
+//     this.current = 0;
+//   }
+//   increment(){
+//     this.current++;
+//   }
+//   addRoom(amount:number){
+//     this.room += amount;
+//   }
+//   getLevel(){
+//     return Math.floor(this.room/10)
+//   }
+// }
+
+
+
+// class Gear{
+
+// }
+
+// class Shirt extends Gear{
+
+// }
+// class Shoe extends Gear{
+
+// }
+// class Pant extends Gear{
+
+// }
+// class Knowledge extends Gear{
+
+// }
+
+// class Session{
+    
+// }
+// let a = new Insanity(20,3);
+// console.log(a)
+console.log(process.env.NODE_ENV)
+// if (process.env.NODE_ENV !== "production") {
+//   require('dotenv').config();
+// }
+
+// const session = require('express-session');
+// const express = require("express");
+// const cookieParser = require("cookie-parser");
+
+
+// const app = express()
+// const port = 3000
+// app.use(session({
+//   secret: 'meta go',
+//   resave: false,
+//   saveUninitialized: true,
+//   cookie: { secure: true }
+// }))
+// app.use(cookieParser());
+// app.get('/', function(req, res){
+//     res.send('hello')
+//     if(req.session.cookie.maxAge!=undefined){
+//         req.session.cookie.maxAge++;
+//     }else{
+//         req.session.cookie.maxAge = 0
+//     }
+//     console.log(req.session.id,req.session.cookie.maxAge)
+// });
+
+
+// app.listen(port, () => {
+//   console.log(`Example app listening on port ${port}`)
+// })
+// //
+// // app.use(session({
+// //   genid: function(req) {
+// //     return genuuid() // use UUIDs for session IDs
+// //   },
+// //   secret: 'keyboard cat'
+// // }))
+
+// //
+// // const { MongoClient } = require("mongodb");
+// // const uri = "mongodb://localhost";
+// // const client = new MongoClient(uri);
+// // async function run() {
+// //   try {
+// //     await client.connect();
+// //     // database and collection code goes here
+// //     const db = client.db("mydb");
+// //     const coll = db.collection("customers");
+// //
+// //     // find code goes here
+// //     const cursor = coll.find();
+// //
+// //     // iterate code goes here
+// //     await cursor.forEach(console.log);
+// //   } finally {
+// //     // Ensures that the client will close when you finish/error
+// //     await client.close();
+// //   }
+// // }
+// // run().catch(console.dir);
+
+
