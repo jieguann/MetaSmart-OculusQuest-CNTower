@@ -4056,7 +4056,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectName: CN Tower
-  ObjectInstructions: Collect CN Tower as a NFT
+  ObjectInstructions: "CN Tower, also called Canadian National Tower, broadcast and
+    telecommunications tower in Toronto. Standing at a height of 1,815 feet (553
+    metres), it was the world\u2019s tallest freestanding structure until 2007"
   objectManipulationType: 0
   showLaserWhileGrabbed: 0
   grabbedRotation: {x: 0, y: 0, z: 0, w: 1}

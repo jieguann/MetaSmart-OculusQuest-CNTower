@@ -31,16 +31,12 @@ public class ObjectManipulator : MonoBehaviour
     public GameObject demoObjects;
 
     // only used in this script for fading in from black
-    public OVRPassthroughLayer passthrough;
+    //public OVRPassthroughLayer passthrough;
 
     private void Start()
     {
-        if (passthrough)
-        {
-            passthrough.colorMapEditorBrightness = -1;
-            passthrough.colorMapEditorContrast = -1;
-        }
-        StartCoroutine(StartDemo());
+       
+        //StartCoroutine(StartDemo());
         // render these UI elements after the passthrough "hole punch" shader and the brush ring
         if (objectNameLabel) objectNameLabel.font.material.renderQueue = 4600;
         if (objectInstructionsLabel) objectInstructionsLabel.font.material.renderQueue = 4600;
@@ -115,29 +111,7 @@ public class ObjectManipulator : MonoBehaviour
     }
 
     // wait for systems to get situated, then spawn the objects in front of them
-    IEnumerator StartDemo()
-    {
-        demoObjects.SetActive(false);
-        // fade from black
-        float timer = 0.0f;
-        float fadeTime = 1.0f;
-        while (timer <= fadeTime)
-        {
-            timer += Time.deltaTime;
-            float normTimer = Mathf.Clamp01(timer / fadeTime);
-            if (passthrough)
-            {
-                passthrough.colorMapEditorBrightness = Mathf.Lerp(-1.0f, 0.0f, normTimer);
-                passthrough.colorMapEditorContrast = Mathf.Lerp(-1.0f, 0.0f, normTimer);
-            }
-            yield return null;
-        }
-        //yield return new WaitForSeconds(1.0f);
-        //demoObjects.SetActive(true);
-        //Vector3 objFwd = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized;
-        //demoObjects.transform.position = Camera.main.transform.position + objFwd;
-        //demoObjects.transform.rotation = Quaternion.LookRotation(objFwd);
-    }
+    
 
     void FindHoverObject(Vector3 controllerPos, Quaternion controllerRot)
     {
